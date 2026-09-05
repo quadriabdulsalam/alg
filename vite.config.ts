@@ -2,14 +2,14 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    server: { entry: "server" },
-    pages: [{ path: "/" }],
+    // Remove this: server: { entry: "server" },
+    // Remove this: pages: [{ path: "/" }],
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
   nitro: {
-    preset: "vercel",          // <-- add this
+    preset: "vercel",
     vercel: {
-      regions: ["iad1"],       // optional: pick your region
+      regions: ["iad1"],
     },
   },
 });
